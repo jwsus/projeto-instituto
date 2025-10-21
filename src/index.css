@@ -1,0 +1,32 @@
+/* Adicione este código no seu arquivo CSS principal (ex: src/index.css) */
+
+.wave-bottom {
+  position: relative;
+}
+
+.wave-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px; /* Altura da curva */
+  background-color: white; /* Cor da seção ABAIXO da curva */
+  clip-path: ellipse(75% 100% at 50% 100%);
+}
+
+.wave-top {
+  position: relative;
+}
+
+.wave-top::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 80px; /* Altura da curva */
+  background-color: white; /* Cor da seção ACIMA da curva */
+  clip-path: ellipse(75% 100% at 50% 0%);
+  z-index: 1; /* Para garantir que fique por cima da imagem de fundo */
+}
