@@ -10,6 +10,7 @@ import Contato from './pages/Contato'
 import Noticias from './pages/Noticias'
 import Contraturno from './pages/Contraturno'
 import Hortifruti from './pages/Hortifruti'
+import Sedes from './pages/Sedes'
 import './App.css'
 
 function App() {
@@ -34,12 +35,14 @@ function App() {
             <Route path="/contato" element={<Contato />} />
             <Route path="/atividades" element={<Contraturno />} />
             <Route path="/hortifruti" element={<Hortifruti />} />
+            <Route path="/sedes" element={<Sedes />} />
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
   )
+
 }
 
 export default App
