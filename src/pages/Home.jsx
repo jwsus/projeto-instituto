@@ -81,14 +81,14 @@ const Home = () => {
                   <Link to="/doe-agora">Doe Agora!</Link>
                 </Button>
                 <Button
-  asChild
-  size="lg"
-  variant="outline"
-  className="text-xl border-2 border-white bg-white text-[color:var(--brand-sky)] hover:bg-white hover:text-[color:var(--brand-sky)] font-bold rounded-full transform hover:scale-105 transition-transform"
-  style={{ fontFamily: handwritingFont, '--brand-sky': brandColors.sky }}
->
-  <Link to="/seja-voluntario">Seja um Amigo</Link>
-</Button>
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="text-xl border-2 border-white bg-white text-[color:var(--brand-sky)] hover:bg-white hover:text-[color:var(--brand-sky)] font-bold rounded-full transform hover:scale-105 transition-transform"
+                  style={{ fontFamily: handwritingFont, '--brand-sky': brandColors.sky }}
+                >
+                  <Link to="/seja-voluntario">Seja um Amigo</Link>
+                </Button>
 
               </div>
             </div>

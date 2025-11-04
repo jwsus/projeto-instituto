@@ -208,15 +208,15 @@ const Contato = () => {
                     <div className="text-center text-gray-500">
                       <MapPin className="h-12 w-12 mx-auto mb-2" />
                       <p>Mapa interativo</p>
-                      <p className="text-sm">Vitória - ES</p>
+                      <p className="text-sm">Ponta Grossa, PR</p>
                     </div>
                   </div>
                   <div className="p-6">
                     <h3 className="font-bold text-gray-900 mb-2">Instituto João XXIII</h3>
                     <p className="text-gray-600 text-sm mb-4">
-                      Rua Exemplo, 123<br />
-                      Bairro São Benedito<br />
-                      Vitória - ES, 29000-000
+                      R. Padre João Piamarta, 597<br />
+                      Colonia Dona Luiza<br />
+                      Ponta Grossa - PR, 84046-060
                     </p>
                     <Button variant="outline" size="sm" className="w-full">
                       Ver no Google Maps
