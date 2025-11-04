@@ -34,25 +34,24 @@ const Contato = () => {
       icon: <MapPin className="h-6 w-6 text-teal-500" />,
       title: "Endereço",
       content: [
-        "Rua Exemplo, 123",
-        "Bairro São Benedito",
-        "Vitória - ES, 29000-000"
+        "R. Padre João Piamarta, 597",
+        "Colonia Dona Luiza",
+        "Ponta Grossa - PR, 84046-060"
       ]
     },
     {
       icon: <Phone className="h-6 w-6 text-teal-500" />,
       title: "Telefone",
       content: [
-        "(27) 3315-1685",
-        "WhatsApp: (27) 99999-9999"
+        "(42) 3229-1353",
+        "WhatsApp: (42) 3229-1353"
       ]
     },
     {
       icon: <Mail className="h-6 w-6 text-teal-500" />,
       title: "E-mail",
       content: [
-        "contato@joaoxxiii.org.br",
-        "presidencia@joaoxxiii.org.br"
+        "perguntas@institutojoaoxxiii.org"
       ]
     },
     {

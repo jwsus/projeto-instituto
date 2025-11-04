@@ -80,9 +80,16 @@ const Home = () => {
                 <Button asChild size="lg" className="text-xl font-bold rounded-full transform hover:scale-105 transition-transform" style={{ fontFamily: handwritingFont, backgroundColor: brandColors.yellow, color: '#854d0e' }}>
                   <Link to="/doe-agora">Doe Agora!</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="text-xl border-2 border-white text-white hover:bg-white font-bold rounded-full transform hover:scale-105 transition-transform" style={{ fontFamily: handwritingFont, '--hover-color': brandColors.sky }} onMouseOver={e => e.currentTarget.style.color = brandColors.sky} onMouseOut={e => e.currentTarget.style.color = 'white'}>
-                  <Link to="/seja-voluntario">Seja um Amigo</Link>
-                </Button>
+                <Button
+  asChild
+  size="lg"
+  variant="outline"
+  className="text-xl border-2 border-white bg-white text-[color:var(--brand-sky)] hover:bg-white hover:text-[color:var(--brand-sky)] font-bold rounded-full transform hover:scale-105 transition-transform"
+  style={{ fontFamily: handwritingFont, '--brand-sky': brandColors.sky }}
+>
+  <Link to="/seja-voluntario">Seja um Amigo</Link>
+</Button>
+
               </div>
             </div>
             <div className="relative hidden lg:block transform rotate-2">
