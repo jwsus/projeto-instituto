@@ -20,7 +20,7 @@ const Header = () => {
       ]
     },
     { name: 'Nosso Trabalho', href: '/nosso-trabalho' },
-    { name: 'Sedes', href: '/sedes' },
+    { name: 'Sedes', href: '/sedes'},
     { name: 'Fique por Dentro', href: '/fique-por-dentro' },
     { name: 'Seja um Voluntário', href: '/seja-voluntario' },
     {

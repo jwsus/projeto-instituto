@@ -46,7 +46,7 @@ const Home = () => {
   const ctaBackgroundImage ='https://joaoxxiii.org.br/wp-content/uploads/2022/07/Foto-inicial-1-1-1.png'; // Criança sorrindo de perto
   
   // Definimos as cores e a fonte aqui, já que não temos o tailwind.config.js
-  const handwritingFont = '"Chalkduster", "Chalkboard SE", cursive, sans-serif';
+  const handwritingFont = 'cursive';
   const brandColors = {
     sky: '#38bdf8',
     yellow: '#facc15',

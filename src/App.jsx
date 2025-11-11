@@ -11,6 +11,10 @@ import Noticias from './pages/Noticias'
 import Contraturno from './pages/Contraturno'
 import Hortifruti from './pages/Hortifruti'
 import Sedes from './pages/Sedes'
+import Brasil from './pages/Brasil'
+import Angola from './pages/Angola'
+import Chile from './pages/Chile'
+import Italia from './pages/Italia'
 import './App.css'
 
 function App() {
@@ -36,6 +40,10 @@ function App() {
             <Route path="/atividades" element={<Contraturno />} />
             <Route path="/hortifruti" element={<Hortifruti />} />
             <Route path="/sedes" element={<Sedes />} />
+            <Route path="/brasil" element={<Brasil />} />
+            <Route path="/chile" element={<Chile />} />
+            <Route path="/angola" element={<Angola />} />
+            <Route path="/italia" element={<Italia />} />
           </Routes>
         </main>
         <Footer />

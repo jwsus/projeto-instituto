@@ -1,20 +1,7 @@
-// src/pages/Home.jsx
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Heart, ArrowRight } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
-// 1. Importações adicionadas
 import { Link } from "react-router-dom";
-// WaveDivider foi REMOVIDO
-
-/* NOTA SOBRE FONTES:
-  Lembre-se de importar "Bubblegum Sans" e "Fredoka"
-  no seu CSS global e tailwind.config.js para que as fontes
-  (font-bubblegum e font-fredoka) funcionem.
-*/
-
 // --- SEUS DADOS DAS SEDES (MANTIDOS) ---
 const sedesAngola = [
   {
@@ -92,9 +79,8 @@ const sedesItalia = [
 // Substituí 'renderSedeCard' por um componente mais limpo
 // que usa suas imagens e descrições.
 
-const SedeCard = ({ sede, cardColor }) => (
-  <div className="bg-white shadow-xl rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col">
-    {/* Imagem do seu array de dados */}
+const SedeCard = ({ sede, cardColor, linkPath }) => (
+  <div className="bg-white shadow-xl rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col"> {/* Imagem do seu array de dados */}
     <div className="aspect-video overflow-hidden">
       <img
         src={sede.imagem}
@@ -123,7 +109,7 @@ const SedeCard = ({ sede, cardColor }) => (
       </p>
       {/* Link (ainda não aponta para nada) */}
       <Link
-        to="#" // Futuramente, link para a página da sede específica
+        to={linkPath} // <-- MUDE DE "#" PARA linkPath
         className={`inline-flex items-center text-sm font-semibold ${cardColor} hover:underline group`}
       >
         Saiba Mais
@@ -137,6 +123,9 @@ const SedeCard = ({ sede, cardColor }) => (
 // --- 3. SEÇÃO DE PAÍS REUTILIZÁVEL ---
 // Componente para criar as seções (brancas ou coloridas)
 
+// --- 3. SEÇÃO DE PAÍS REUTILIZÁVEL ---
+// ...
+
 const SedesSection = ({
   id,
   name,
@@ -145,29 +134,14 @@ const SedesSection = ({
   bgColor,
   titleColor,
   cardColor,
-  descriptionColor
+  descriptionColor,
+  linkPath // <-- ADICIONE linkPath AQUI NAS PROPS
 }) => {
 
   return (
-    // A tag <WaveDivider> foi removida daqui
     <section id={id} className={`${bgColor} relative`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          {/* Título com a fonte 'Bubblegum Sans' */}
-          <h2
-            className={`text-5xl md:text-6xl font-bold mb-6 ${titleColor}`}
-            style={{ fontFamily: 'Bubblegum Sans, cursive' }}
-          >
-            Sedes no {name}
-          </h2>
-          {/* Descrição com a fonte 'Fredoka' */}
-          <p
-            className={`text-xl ${descriptionColor}`}
-            style={{ fontFamily: 'Fredoka, sans-serif' }}
-          >
-            {description}
-          </p>
-        </div>
+        {/* ... div de título e descrição ... */}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sedes.map((sede) => (
@@ -175,19 +149,18 @@ const SedesSection = ({
               key={sede.nome}
               sede={sede}
               cardColor={cardColor}
+              linkPath={linkPath} // <-- PASSE O linkPath AQUI
             />
           ))}
         </div>
       </div>
-      {/* A tag <WaveDivider> foi removida daqui */}
     </section>
   );
 };
 
-
 // --- 4. COMPONENTE HOME (PRINCIPAL) ---
 
-export default function Home() {
+export default function sede() {
   return (
     <div className="min-h-screen flex flex-col">
       
@@ -224,6 +197,7 @@ export default function Home() {
           titleColor="text-green-700"
           cardColor="text-green-600"
           descriptionColor="text-gray-600"
+          linkPath="/brasil"
         />
         
         <SedesSection
@@ -236,6 +210,7 @@ export default function Home() {
           titleColor="text-yellow-800"
           cardColor="text-yellow-600"
           descriptionColor="text-yellow-700"
+          linkPath="/angola"
         />
 
         <SedesSection
@@ -247,6 +222,7 @@ export default function Home() {
           titleColor="text-red-700"
           cardColor="text-red-600"
           descriptionColor="text-gray-600"
+          linkPath="/chile"
         />
 
         <SedesSection
@@ -259,6 +235,7 @@ export default function Home() {
           titleColor="text-blue-800"
           cardColor="text-blue-600"
           descriptionColor="text-blue-700"
+          linkPath="/italia"
         />
 
         {/* --- Call to Action Final (Refatorado) --- */}
