@@ -1,171 +1,119 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Heart, ArrowRight } from "lucide-react";
-
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-// --- SEUS DADOS DAS SEDES (MANTIDOS) ---
-const sedesAngola = [
+
+// --- DADOS DAS SEDES (MANTIDOS APENAS COMO REFERÊNCIA DE CORES E DESCRIÇÃO) ---
+// Os dados dos cards individuais não são mais usados, mas as informações do país são mantidas.
+const countryData = [
   {
-    nome: "Luanda",
-    descricao: "Centro educacional e social na capital",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg"
+    id: "brasil",
+    name: "Brasil",
+    description: "No Brasil, os Piamartinos atuam em diversas regiões, oferecendo programas de formação e assistência, com foco no fortalecimento da fé e na inclusão social.",
+    titleColor: "text-green-700",
+    cardColor: "text-green-600",
+    linkPath: "/brasil",
+    flag: "🇧🇷"
   },
   {
-    nome: "Benguela",
-    descricao: "Apoio comunitário e formação",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/8000-b8b169d1fd74-768x1024.jpg"
+    id: "angola",
+    name: "Angola",
+    description: "Na Angola, nossa congregação se dedica a apoiar comunidades locais através de projetos educacionais e sociais, promovendo esperança e desenvolvimento sustentável.",
+    titleColor: "text-yellow-800",
+    cardColor: "text-yellow-600",
+    linkPath: "/angola",
+    flag: "🇦🇴"
   },
   {
-    nome: "Huambo",
-    descricao: "Projetos educacionais sustentáveis",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/8bd1-39166be16d64-1024x768.jpg"
+    id: "chile",
+    name: "Chile",
+    description: "No Chile, nossa missão é promover a solidariedade e o bem-estar das famílias, através de iniciativas que englobam educação, saúde e apoio espiritual.",
+    titleColor: "text-red-700",
+    cardColor: "text-red-600",
+    linkPath: "/chile",
+    flag: "🇨🇱"
+  },
+  {
+    id: "italia",
+    name: "Itália",
+    description: "Na Itália, onde nossa história começou, continuamos a expandir nossas obras, focando em inovação e tradição, sempre em prol do crescimento humano e espiritual.",
+    titleColor: "text-blue-800",
+    cardColor: "text-blue-600",
+    linkPath: "/italia",
+    flag: "🇮🇹"
   }
 ];
 
-const sedesBrasil = [
-  {
-    nome: "São Paulo - Caravaggio",
-    descricao: "Paróquia Nossa Senhora de Caravaggio",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/ParA³quia-Nossa-Senhora-de-Caravaggio.webp"
-  },
-  {
-    nome: "Fartura",
-    descricao: "Instituto João XXIII",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/Background-1024x576.png"
-  },
-  {
-    nome: "Escola Agrícola",
-    descricao: "Escola Agrícola Padre Piamarta",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/Escola-AgrA­cola-Padre-Piamarta.jpg"
-  }
-];
-
-const sedesChile = [
-  {
-    nome: "Santiago",
-    descricao: "Casa Piamarta Central",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/Casa-Piamarta-Central-1024x527.jpg"
-  },
-  {
-    nome: "Valparaíso",
-    descricao: "Paróquia Rainha dos Apóstolos",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/ParA³quia-Rainha-dos-ApA³stolos-1024x657.png"
-  },
-  {
-    nome: "Concepción",
-    descricao: "Colégio Juan Piamarta",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/ColA©gio-Juan-Piamarta-1024x518.jpg"
-  }
-];
-
-const sedesItalia = [
-  {
-    nome: "Brescia",
-    descricao: "Editrice Queriniana",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/Editrice-Queriniana.jpg"
-  },
-  {
-    nome: "Parma",
-    descricao: "Paróquia de Sant'Anna",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/ParA³quia-de-SantAnna-1024x683.jpeg"
-  },
-  {
-    nome: "Cremona",
-    descricao: "Instituto Bonsignori",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/Instituto-Bonsignori-1024x575.jpg"
-  }
-];
-
-// --- 2. CARD REFATORADO ---
-// Substituí 'renderSedeCard' por um componente mais limpo
-// que usa suas imagens e descrições.
-
-const SedeCard = ({ sede, cardColor, linkPath }) => (
-  <div className="bg-white shadow-xl rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col"> {/* Imagem do seu array de dados */}
-    <div className="aspect-video overflow-hidden">
-      <img
-        src={sede.imagem}
-        alt={sede.nome}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      />
-    </div>
-    
-    {/* Barra de cor */}
-    <div className={`h-2 ${cardColor.replace('text-', 'bg-')}`}></div>
-
-    <CardContent className="p-6 flex flex-col flex-grow">
-      {/* Título com a fonte 'Fredoka' */}
-      <h3
-        className={`text-2xl font-bold mb-3 ${cardColor}`}
-        style={{ fontFamily: 'Fredoka, sans-serif' }}
-      >
-        {sede.nome}
-      </h3>
-      {/* Descrição com a fonte 'Fredoka' */}
-      <p 
-        className="text-gray-600 mb-5 flex-grow"
-        style={{ fontFamily: 'Fredoka, sans-serif' }}
-      >
-        {sede.descricao}
-      </p>
-      {/* Link (ainda não aponta para nada) */}
-      <Link
-        to={linkPath} // <-- MUDE DE "#" PARA linkPath
-        className={`inline-flex items-center text-sm font-semibold ${cardColor} hover:underline group`}
-      >
-        Saiba Mais
-        <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
-      </Link>
-    </CardContent>
-  </div>
-);
-
-
-// --- 3. SEÇÃO DE PAÍS REUTILIZÁVEL ---
-// Componente para criar as seções (brancas ou coloridas)
-
-// --- 3. SEÇÃO DE PAÍS REUTILIZÁVEL ---
-// ...
+// --- 2. COMPONENTE DE SEÇÃO SIMPLIFICADO ---
+// Removemos a lógica de mapeamento dos SedeCards.
 
 const SedesSection = ({
   id,
   name,
   description,
-  sedes,
   bgColor,
   titleColor,
-  cardColor,
-  descriptionColor,
-  linkPath // <-- ADICIONE linkPath AQUI NAS PROPS
+  cardColor, // Mantido para definir a cor do botão
+  linkPath,
+  flag
 }) => {
+  // Lógica de cores do botão mantida
+  const buttonBgColor = cardColor.replace('text-', 'bg-');
+  const buttonHoverBgColor = buttonBgColor.replace('-600', '-700');
+  const finalHoverClass = buttonHoverBgColor.includes('text-') 
+    ? buttonHoverBgColor.replace('text-', 'hover:bg-') 
+    : `hover:bg-${buttonHoverBgColor.split('-')[1]}-700`; 
 
   return (
     <section id={id} className={`${bgColor} relative`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        {/* ... div de título e descrição ... */}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sedes.map((sede) => (
-            <SedeCard
-              key={sede.nome}
-              sede={sede}
-              cardColor={cardColor}
-              linkPath={linkPath} // <-- PASSE O linkPath AQUI
-            />
-          ))}
+        {/* CABEÇALHO COM BANDEIRA */}
+        <div className="text-center mb-16 max-w-4xl mx-auto">
+          <div className="flex items-center justify-center mb-6">
+            {/* Bandeira proeminente */}
+            <span className="text-6xl md:text-7xl mr-5">{flag}</span>
+            <h2
+              className={`text-5xl md:text-6xl font-bold ${titleColor}`}
+              style={{ fontFamily: 'Bubblegum Sans, cursive' }}
+            >
+              {name}
+            </h2>
+          </div>
+          
+          <p
+            className="text-xl text-gray-700 max-w-3xl mx-auto"
+            style={{ fontFamily: 'Fredoka, sans-serif' }}
+          >
+            {description}
+          </p>
         </div>
+        
+        {/* O GRID DE CARDS FOI REMOVIDO DAQUI */}
+
+        {/* Botão Saiba Mais por País (Centralizado e Único) */}
+        <div className="text-center mt-8">
+          <Link
+            to={linkPath}
+            className={`inline-flex items-center text-lg font-bold px-10 py-4 rounded-full text-white shadow-xl transition-all duration-300 transform hover:scale-105 ${buttonBgColor} ${finalHoverClass}`}
+            style={{ fontFamily: 'Fredoka, sans-serif' }}
+          >
+            Conheça as Obras no {name}
+            <ArrowRight className="h-5 w-5 ml-3" />
+          </Link>
+        </div>
+        
       </div>
     </section>
   );
 };
 
-// --- 4. COMPONENTE HOME (PRINCIPAL) ---
-
 export default function sede() {
   return (
     <div className="min-h-screen flex flex-col">
-      
+
       <main className="flex-grow">
-        {/* --- Hero Section Refatorada --- */}
+        {/* --- Hero Section --- */}
         <section className="py-20 lg:py-28 bg-gradient-to-br from-teal-500 to-blue-500 text-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <Globe className="h-20 w-20 mx-auto mb-6 animate-bounce" />
@@ -183,62 +131,26 @@ export default function sede() {
               fortalecendo vínculos e transformando vidas em 4 países!
             </p>
           </div>
-          {/* A tag <WaveDivider> foi removida daqui */}
         </section>
 
-        {/* --- Seções dos Países Refatoradas --- */}
+        {/* --- Seções dos Países (Agora apenas o cabeçalho e botão) --- */}
         
-        <SedesSection
-          id="brasil"
-          name="Brasil"
-          description="No Brasil, os Piamartinos atuam em diversas regiões, oferecendo programas de formação e assistência, com foco no fortalecimento da fé e na inclusão social."
-          sedes={sedesBrasil}
-          bgColor="bg-white"
-          titleColor="text-green-700"
-          cardColor="text-green-600"
-          descriptionColor="text-gray-600"
-          linkPath="/brasil"
-        />
-        
-        <SedesSection
-          id="angola"
-          name="Angola"
-          description="Na Angola, nossa congregação se dedica a apoiar comunidades locais através de projetos educacionais e sociais, promovendo esperança e desenvolvimento sustentável."
-          sedes={sedesAngola}
-          bgColor="bg-yellow-50"
-          // waveColor foi removido
-          titleColor="text-yellow-800"
-          cardColor="text-yellow-600"
-          descriptionColor="text-yellow-700"
-          linkPath="/angola"
-        />
+        {countryData.map((country, index) => (
+          <SedesSection
+            key={country.id}
+            id={country.id}
+            name={country.name}
+            description={country.description}
+            // Alterna o background (Branco / Cinza Claro)
+            bgColor={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+            titleColor={country.titleColor}
+            cardColor={country.cardColor}
+            linkPath={country.linkPath}
+            flag={country.flag}
+          />
+        ))}
 
-        <SedesSection
-          id="chile"
-          name="Chile"
-          description="No Chile, nossa missão é promover a solidariedade e o bem-estar das famílias, através de iniciativas que englobam educação, saúde e apoio espiritual."
-          sedes={sedesChile}
-          bgColor="bg-white"
-          titleColor="text-red-700"
-          cardColor="text-red-600"
-          descriptionColor="text-gray-600"
-          linkPath="/chile"
-        />
-
-        <SedesSection
-          id="italia"
-          name="Itália"
-          description="Na Itália, onde nossa história começou, continuamos a expandir nossas obras, focando em inovação e tradição, sempre em prol do crescimento humano e espiritual."
-          sedes={sedesItalia}
-          bgColor="bg-blue-50"
-          // waveColor foi removido
-          titleColor="text-blue-800"
-          cardColor="text-blue-600"
-          descriptionColor="text-blue-700"
-          linkPath="/italia"
-        />
-
-        {/* --- Call to Action Final (Refatorado) --- */}
+        {/* --- Call to Action Final --- */}
         <section className="relative py-20 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -256,7 +168,7 @@ export default function sede() {
               Sua ajuda transforma vidas em 4 países. Junte-se a nós!
             </p>
             <Link
-              to="/doe-agora" // Apontando para a página de doação
+              to="/doe-agora" 
               className="inline-block bg-white hover:bg-gray-100 text-purple-600 rounded-full px-12 py-6 text-2xl font-bold transform hover:scale-110 transition-transform shadow-2xl"
               style={{ fontFamily: 'Fredoka, sans-serif' }}
             >

@@ -51,27 +51,13 @@ const SedeDetalheCard = ({ sede, cor = 'green' }) => {
         >
           {sede.nome}
         </h3>
-
-        <ul className="space-y-3 mb-6 flex-grow">
-          <li className="flex items-start space-x-3">
-            <MapPin className={`h-5 w-5 ${colors.text} flex-shrink-0 mt-1`} />
-            <p className="text-gray-600" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-              {sede.endereco}
-            </p>
-          </li>
-          <li className="flex items-start space-x-3">
-            <Phone className={`h-5 w-5 ${colors.text} flex-shrink-0 mt-1`} />
-            <p className="text-gray-600" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-              {sede.telefone}
-            </p>
-          </li>
-          <li className="flex items-start space-x-3">
-            <Mail className={`h-5 w-5 ${colors.text} flex-shrink-0 mt-1`} />
-            <p className="text-gray-600" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-              {sede.email}
-            </p>
-          </li>
-        </ul>
+        <p
+          className="text-gray-700 mb-6 flex-grow"
+          style={{ fontFamily: 'Fredoka, sans-serif' }}
+        >
+          {sede.descricao}
+        </p>
+        
 
         {/* Redes Sociais */}
         <div className="flex space-x-4">

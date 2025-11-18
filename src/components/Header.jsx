@@ -13,9 +13,11 @@ const Header = () => {
       name: 'Conheça',
       href: '#',
       dropdown: [
-        { name: 'Nossa História', href: '/conheca/nossa-historia' },
+        { name: 'Nossa História', href: '/conheca/nossa-historia'},   
         { name: 'Estrutura e Equipe', href: '/conheca/estrutura-equipe' },
         { name: 'Governança e Transparência', href: '/conheca/governanca-transparencia' },
+        { name: 'Congregação', href: '/conheca/congregacao' },
+        { name: 'São João de Piamarta', href: '/conheca/sao-joao-de-piamarta' },
         { name: 'Parceiros', href: '/conheca/parceiros' }
       ]
     },

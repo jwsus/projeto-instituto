@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram} from 'lucide-react'
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -232,21 +232,13 @@ const Contato = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="grid grid-cols-2 gap-4">
-                    <a href="#" className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                    <a href="https://www.facebook.com/institutojoao23" className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                       <Facebook className="h-6 w-6 text-blue-600 mr-3" />
                       <span className="text-gray-700 font-medium">Facebook</span>
                     </a>
-                    <a href="#" className="flex items-center p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                    <a href="https://www.instagram.com/piamarta_joao_23/" className="flex items-center p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
                       <Instagram className="h-6 w-6 text-pink-600 mr-3" />
                       <span className="text-gray-700 font-medium">Instagram</span>
-                    </a>
-                    <a href="#" className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                      <Linkedin className="h-6 w-6 text-blue-700 mr-3" />
-                      <span className="text-gray-700 font-medium">LinkedIn</span>
-                    </a>
-                    <a href="#" className="flex items-center p-3 bg-red-50 rounded-lg hover:bg-red-100 transition-colors">
-                      <Youtube className="h-6 w-6 text-red-600 mr-3" />
-                      <span className="text-gray-700 font-medium">YouTube</span>
                     </a>
                   </div>
                   
@@ -257,12 +249,15 @@ const Contato = () => {
                       </div>
                       <div>
                         <p className="font-medium text-gray-900">WhatsApp</p>
-                        <p className="text-sm text-gray-600">(27) 99999-9999</p>
+                        <p className="text-sm text-gray-600">(42) 3229-1353</p>
                       </div>
                     </div>
-                    <Button className="w-full mt-3 bg-green-500 hover:bg-green-600 text-white">
+                    <a href="https://api.whatsapp.com/send/?phone=554232291353&text&type=phone_number&app_absent=0" className="flex items-center p-3 bg-red-50 rounded-lg hover:bg-red-100 transition-colors">
+                      <Button className="w-full mt-3 bg-green-500 hover:bg-green-600 text-white">
                       Conversar no WhatsApp
-                    </Button>
+                      </Button> 
+                    </a>
+                    
                   </div>
                 </CardContent>
               </Card>

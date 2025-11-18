@@ -9,28 +9,12 @@ import { MapPin } from 'lucide-react'
 // Dados detalhados
 const sedesAngolaData = [
   {
-    nome: "Luanda",
-    descricao: "Centro educacional e social na capital",
+    nome: "Lucala, Angola",
+    descricao: "31 de julho de  1992, o Padre Felice Pistoni, italiano, e o Padre Vicente Edelto Tavares Leite, Brasileiros, chegam  a Ndalatando, acolhidos pelos maristas: entram oficialmente na paróquia “Nossa Senhora da  Conceição” de Lucala em 20 de agosto de 1992. Às 7h do dia 12 de janeiro de 1993, o padre Felice  Pistoni, incansável missionário piamartino, atingido pela malária, entregou sua alma a Deus: “Aqui o  corpo permaneceu como semente para o futuro desta Igreja local de Ndalatando”, escreve o bispo ao  Superior Geral.",
     imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg",
     endereco: "Rua da Missão, 100 - Luanda, Angola",
     telefone: "+244 123 456 789",
     email: "luanda@joaoxxiii.org.ao"
-  },
-  {
-    nome: "Benguela",
-    descricao: "Apoio comunitário e formação",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/8000-b8b169d1fd74-768x1024.jpg",
-    endereco: "Av. da Solidariedade, 200 - Benguela, Angola",
-    telefone: "+244 987 654 321",
-    email: "benguela@joaoxxiii.org.ao"
-  },
-  {
-    nome: "Huambo",
-    descricao: "Projetos educacionais sustentáveis",
-    imagem: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/8bd1-39166be16d64-1024x768.jpg",
-    endereco: "Largo da Esperança, 300 - Huambo, Angola",
-    telefone: "+244 555 555 555",
-    email: "huambo@joaoxxiii.org.ao"
   }
 ];
 
