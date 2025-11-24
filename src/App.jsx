@@ -32,7 +32,6 @@ function App() {
             <Route path="/conheca/congregacao" element={<Congregacao />} />
             <Route path="/conheca/sao-joao-de-piamarta" element={<Piamarta />} />
             <Route path="/conheca/estrutura-equipe" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Estrutura e Equipe</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
-            <Route path="/conheca/governanca-transparencia" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Governança e Transparência</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
             <Route path="/conheca/parceiros"  element={<Parceiros />} />
             <Route path="/atividades/nossa-historia" element={<NossaHistoria />} />
             <Route path="/nosso-trabalho" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Nosso Trabalho</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
@@ -41,8 +40,8 @@ function App() {
             <Route path="/noticias/blog" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Blog</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
             <Route path="/noticias/na-midia" element={<Noticias/>} />
             <Route path="/contato" element={<Contato />} />
-            <Route path="/atividades" element={<Contraturno />} />
-            <Route path="/hortifruti" element={<Hortifruti />} />
+            <Route path="/nosso-trabalho/atividades" element={<Contraturno />} />
+            <Route path="/nosso-trabalho/hortifruti" element={<Hortifruti />} />
             <Route path="/sedes" element={<Sedes />} />
             <Route path="/brasil" element={<Brasil />} />
             <Route path="/chile" element={<Chile />} />

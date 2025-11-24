@@ -15,13 +15,17 @@ const Header = () => {
       dropdown: [
         { name: 'Nossa História', href: '/conheca/nossa-historia'},   
         { name: 'Estrutura e Equipe', href: '/conheca/estrutura-equipe' },
-        { name: 'Governança e Transparência', href: '/conheca/governanca-transparencia' },
         { name: 'Congregação', href: '/conheca/congregacao' },
         { name: 'São João de Piamarta', href: '/conheca/sao-joao-de-piamarta' },
         { name: 'Parceiros', href: '/conheca/parceiros' }
       ]
     },
-    { name: 'Nosso Trabalho', href: '/nosso-trabalho' },
+    { name: 'Nosso Trabalho', href: '/nosso-trabalho', 
+      dropdown: [
+        { name: 'Hortifruti', href: '/nosso-trabalho/hortifruti'},   
+        { name: 'Quadra/Campo', href: '#' },
+        { name: 'Convivência', href: '/nosso-trabalho/atividades' },
+      ] },
     { name: 'Sedes', href: '/sedes'},
     { name: 'Fique por Dentro', href: '/fique-por-dentro' },
     { name: 'Seja um Voluntário', href: '/seja-voluntario' },

@@ -3,7 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react'
+import { MapPin, Phone, Mail } from 'lucide-react'
 
 // Mapeamento de cores (para facilitar o reuso)
 const themeColors = {
@@ -61,12 +61,6 @@ const SedeDetalheCard = ({ sede, cor = 'green' }) => {
 
         {/* Redes Sociais */}
         <div className="flex space-x-4">
-          <Link to="#" className={`text-gray-500 ${colors.hover}`}>
-            <Facebook className="h-6 w-6" />
-          </Link>
-          <Link to="#" className={`text-gray-500 ${colors.hover}`}>
-            <Instagram className="h-6 w-6" />
-          </Link>
         </div>
       </CardContent>
     </Card>

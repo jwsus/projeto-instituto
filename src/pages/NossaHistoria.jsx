@@ -4,9 +4,9 @@ import { Calendar, Award, Users, Heart } from 'lucide-react'
 const NossaHistoria = () => {
   const timeline = [
     {
-      year: "1999",
+      year: "1976",
       title: "Fundação",
-      description: "O casal Norozeti Zenaide Giuberti Bergi e José Osvaldo Bergi cria o Instituto João XXIII com a primeira apresentação do Coral Coro in Canto no dia 04 de julho de 1999.",
+      description: "Fundado com a missão de proporcionar um ambiente acolhedor e educacional para crianças e adolescentes carentes. A criação do Instituto surgiu da necessidade de um abrigo para menores na cidade de Ponta Grossa.",
       highlight: true
     },
     {
