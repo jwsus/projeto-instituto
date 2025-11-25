@@ -150,32 +150,6 @@ export default function sede() {
           />
         ))}
 
-        {/* --- Call to Action Final --- */}
-        <section className="relative py-20 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white">
-          <div className="absolute inset-0 bg-black/10"></div>
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-            <Heart className="h-16 w-16 mx-auto mb-6 animate-pulse" />
-            <h2 
-              className="text-4xl lg:text-5xl font-bold mb-8"
-              style={{ fontFamily: 'Bubblegum Sans, cursive' }}
-            >
-              Faça Parte Dessa Missão!
-            </h2>
-            <p 
-              className="text-xl mb-8"
-              style={{ fontFamily: 'Fredoka, sans-serif' }}
-            >
-              Sua ajuda transforma vidas em 4 países. Junte-se a nós!
-            </p>
-            <Link
-              to="/doe-agora" 
-              className="inline-block bg-white hover:bg-gray-100 text-purple-600 rounded-full px-12 py-6 text-2xl font-bold transform hover:scale-110 transition-transform shadow-2xl"
-              style={{ fontFamily: 'Fredoka, sans-serif' }}
-            >
-              QUERO AJUDAR! ❤️
-            </Link>
-          </div>
-        </section>
       </main>
 
     </div>

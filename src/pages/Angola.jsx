@@ -64,52 +64,6 @@ const locationsData = [
 
 // --- Sub-componentes ---
 
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 flex items-center">
-            {/* Logo Placeholder */}
-            <span className="font-bold text-xl text-amber-600 tracking-tight" style={{ fontFamily: 'Bubblegum Sans, cursive' }}>
-              Instituto João XXIII
-            </span>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md text-sm font-medium transition">Home</a>
-            <a href="#" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md text-sm font-medium transition">Sobre</a>
-            <a href="#" className="text-amber-600 px-3 py-2 rounded-md text-sm font-bold transition">Angola</a>
-            <a href="#" className="bg-amber-500 text-white hover:bg-amber-600 px-4 py-2 rounded-full text-sm font-medium transition shadow-md">Doar Agora</a>
-          </div>
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-amber-600 p-2">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-    
-    </nav>
-  );
-};
-
-const Footer = () => (
-  <footer className="bg-gray-900 text-white py-12">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h3 className="text-xl font-bold mb-4 text-amber-500" style={{ fontFamily: 'Bubblegum Sans, cursive' }}>Instituto João XXIII</h3>
-        <p className="text-gray-400 text-sm leading-relaxed">
-          Transformando vidas através da educação e da fé. Uma presença Piamartina que une continentes.
-        </p>
-      </div>
-    </div>
-    <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-xs">
-      © {new Date().getFullYear()} Instituto João XXIII. Todos os direitos reservados.
-    </div>
-  </footer>
-);
-
 const TimelineItem = ({ year, title, description, isLast }) => (
   <div className="flex group">
     <div className="flex flex-col items-center mr-6">
