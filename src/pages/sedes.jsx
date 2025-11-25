@@ -1,4 +1,4 @@
-import { Globe, Heart, ArrowRight } from "lucide-react";
+  import { Globe, Heart, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
