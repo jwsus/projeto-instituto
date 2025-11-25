@@ -32,31 +32,33 @@ const timelineEvents = [
 ];
 
 const locationsData = [
- {
-    year: "1983",
-    title: "Chegada dos Piamartinos ao Chile",
-    description: "Em 23 de março de 1983, a Congregação Piamartina chega ao Chile com a assunção da paróquia Nossa Senhora de Fátima, nos arredores de Talca."
-  },
+//  {
+//     year: "1983",
+//     title: "Chegada dos Piamartinos ao Chile",
+//     description: "Em 23 de março de 1983, a Congregação Piamartina chega ao Chile com a assunção da paróquia Nossa Senhora de Fátima, nos arredores de Talca."
+//   },
   {
     year: "1984",
     title: "Colégio Carolina Llona – Maipú",
-    description: "Em 1 de outubro de 1984, assumem o Colégio Parroquial N° 325 Carolina Llona de Cuevas em Maipú, Santiago."
+    description: "Em 1 de outubro de 1984, assumem o Colégio Parroquial N° 325 Carolina Llona de Cuevas em Maipú, Santiago.",
+    image: "/img/maipu.webp"
   },
-  {
-    year: "1990",
-    title: "Abrigo Educativo Beata Laura Vicuña",
-    description: "É fundado o abrigo piamartino “Beata Laura Vicuña” para acolher jovens após a escola."
-  },
+  // {
+  //   year: "1990",
+  //   title: "Abrigo Educativo Beata Laura Vicuña",
+  //   description: "É fundado o abrigo piamartino “Beata Laura Vicuña” para acolher jovens após a escola."
+  // },
   {
     year: "1992",
     title: "Colegio Juan Piamarta – Talca",
-    description: "Em 1992 é aberto o Colegio Piamarta em Estación Central, e em 1994 a escola Juan Piamarta em Talca pela Fundación Juan Piamarta."
+    description: "Em 1992 é aberto o Colegio Piamarta em Estación Central, e em 1994 a escola Juan Piamarta em Talca pela Fundación Juan Piamarta.",
+    image: "/img/talca.webp"
   },
-  {
-    year: "2014",
-    title: "Centro de Espiritualidade Artigianelli",
-    description: "É criado o Centro de Espiritualidade Piamartino Artigianelli voltado à formação pastoral, vocacional e social."
-  }
+  // {
+  //   year: "2014",
+  //   title: "Centro de Espiritualidade Artigianelli",
+  //   description: "É criado o Centro de Espiritualidade Piamartino Artigianelli voltado à formação pastoral, vocacional e social."
+  // }
 
 ];
 

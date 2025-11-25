@@ -57,7 +57,7 @@ const locationsData = [
     city: "Lucala",
     country: "Angola",
     title: "Paróquia Nossa Senhora da Conceição",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/lucala.webp", // Imagem do snippet
     description: ""
   }
 ];

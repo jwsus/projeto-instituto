@@ -52,7 +52,7 @@ const locationsData = [
     city: "São Bento",
     country: "Maranhão",
     title: "Paróquia de São Bento",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/saobento.webp", // Imagem do snippet
     description: ""
   },
   {
@@ -60,7 +60,7 @@ const locationsData = [
     city: "Fortaleza",
     country: "Ceará",
     title: "Paróquia Nossa Senhora de Nazaré Colégio Piamarta",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/fortaleza.webp", // Imagem do snippet
     description: ""
   },
   {
@@ -68,7 +68,7 @@ const locationsData = [
     city: "Matelãndia ",
     country: "Paraná",
     title: "Paróquia Nossa Senhora de Caravaggio e Escola Padre João Piamarta",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/matelandia.webp", // Imagem do snippet
     description: ""
   },
   {
@@ -76,7 +76,7 @@ const locationsData = [
     city: "Ponta Grossa",
     country: "Paraná",
     title: "Instituto João XXIII",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/pontagrossa.webp", // Imagem do snippet
     description: ""
   },
   {
@@ -84,7 +84,7 @@ const locationsData = [
     city: "União da Vitória",
     country: "Paraná",
     title: "Paróquia São Sebastião",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/uniaodavitoria.webp", // Imagem do snippet
     description: ""
   },
   {
@@ -92,7 +92,7 @@ const locationsData = [
     city: "Macapá",
     country: "Amapá",
     title: "Escola Agricola Padre Piamarta e Paróquia São João Batista Piamarta",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/macapa.webp", // Imagem do snippet
     description: ""
   },
   {
@@ -100,7 +100,7 @@ const locationsData = [
     city: "Curitiba",
     country: "Paraná",
     title: "Paróquia Santa Edwiges e Seminário Sagrada Família",
-    image: "https://joaoxxiii.org.br/wp-content/uploads/2022/07/9430-6db4a29ced09-1024x768.jpg", // Imagem do snippet
+    image: "/img/curitiba.webp", // Imagem do snippet
     description: ""
   }
 ];
