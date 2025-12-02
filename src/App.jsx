@@ -41,7 +41,7 @@ function App() {
             <Route path="/doe-agora" element={<DoeAgora />} />
             <Route path="/seja-voluntario" element={<SejaVoluntario />} />
             <Route path="/noticias/blog" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Blog</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
-            <Route path="/noticias/na-midia" element={<Noticias/>} />
+            <Route path="/noticias" element={<Noticias/>} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/nosso-trabalho/atividades" element={<Contraturno />} />
             <Route path="/nosso-trabalho/quadra-campo" element={<QuadraCampo/>} />

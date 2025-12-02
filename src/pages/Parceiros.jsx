@@ -10,39 +10,27 @@ import { Handshake } from 'lucide-react'
 const parceirosData = [
   {
     id: 1,
-    nome: "Empresa Parceira A",
-    imagem: "https://via.placeholder.com/300x150?text=LOGO+A", // Exemplo
-    link: "https://google.com"
+    nome: "SESC",
+    imagem: "/img/sesc.webp", // Exemplo
+    link: "https://www.sescpr.com.br/"
   },
   {
     id: 2,
-    nome: "Fundação Solidária",
-    imagem: "https://via.placeholder.com/300x150?text=FUNDACAO",
-    link: "https://google.com"
+    nome: "UNIASSELV",
+    imagem: "/img/UNIASSELV.webp",
+    link: "https://portal.uniasselvi.com.br/"
   },
   {
     id: 3,
-    nome: "Tech for Good",
-    imagem: "https://via.placeholder.com/300x150?text=TECH+LOGO",
-    link: "https://google.com"
+    nome: "UEPG",
+    imagem: "/img/UEPG.webp",
+    link: "https://www.uepg.br/"
   },
   {
     id: 4,
-    nome: "Supermercados União",
-    imagem: "https://via.placeholder.com/300x150?text=MERCADO",
-    link: null // Exemplo sem link (o botão não aparecerá)
-  },
-  {
-    id: 5,
-    nome: "Banco Comunitário",
-    imagem: "https://via.placeholder.com/300x150?text=BANCO",
-    link: "https://google.com"
-  },
-  {
-    id: 6,
-    nome: "Grupo Educacional",
-    imagem: "https://via.placeholder.com/300x150?text=ESCOLA",
-    link: "https://google.com"
+    nome: "UTFPR",
+    imagem: "/img/utfpr.png",
+    link: "https://www.utfpr.edu.br/campus/pontagrossa"
   }
 ];
 
@@ -85,35 +73,97 @@ export default function Parceiros() {
                 />
               ))}
             </div>
-
-            {/* Mensagem para novos parceiros */}
-            <div className="mt-20 text-center bg-white p-10 rounded-3xl shadow-xl max-w-4xl mx-auto">
+          </div>
+      </section>
+      <section className="bg-orange-50 py-20 lg:py-28">
+        <div className="mt-20 text-center max-w-4xl mx-auto">
               <h2 
                 className="text-3xl md:text-4xl font-bold text-orange-600 mb-6"
-                style={{ fontFamily: 'Bubblegum Sans, cursive' }}
               >
-                Quer ser um parceiro do Instituto?
+                A nossa diretoria
               </h2>
               <p 
                 className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto"
-                style={{ fontFamily: 'Fredoka, sans-serif' }}
               >
-                Sua empresa pode fazer a diferença na vida de milhares de pessoas.
-                Entre em contato conosco e saiba como apoiar nossos projetos.
-              </p>
-              
-              <a href='#/contato'>
-                <button 
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-xl transition-transform hover:scale-105 shadow-lg"
-                  style={{ fontFamily: 'Fredoka, sans-serif' }}> Fale Conosco  
-                </button>
-              </a>
-              
-                
+              O Instituto João XXIII além de ser um espaço incrível, conta com pessoas que fazem a diferença diariamente
+              </p>           
             </div>
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-5 gap-10 items-start">
+                       
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d1.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d2.webp"     
+                          />
+                      </div >
+                     
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d5.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d6.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d7.webp"     
+                          />
+                      </div >
 
-          </div>
-        </section>
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d8.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d9.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d10.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d11.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d12.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d13.webp"     
+                          />
+                      </div >
+                      
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d15.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d16.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d17.webp"     
+                          />
+                      </div >
+                       <div className=" overflow-hidden shadow-2xl border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d3.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2x2 border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d4.webp"     
+                          />
+                      </div >
+                      <div className=" overflow-hidden shadow-2x3 border-4 border-orange-500 padyng -2 ">
+                          <img src="/img/diretoria/d14.webp"     
+                          />
+                      </div >
+                    </div>
+                </section>
+
       </main>
 
     </div>

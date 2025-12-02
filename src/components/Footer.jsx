@@ -100,11 +100,6 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/conheca/governanca-transparencia" className="text-gray-300 hover:text-white transition-colors">
-                    Governança e Transparência
-                  </Link>
-                </li>
-                <li>
                   <Link to="/conheca/parceiros" className="text-gray-300 hover:text-white transition-colors">
                     Parceiros
                   </Link>
@@ -175,9 +170,12 @@ const Footer = () => {
 
               {/* WhatsApp */}
               <div className="mt-4">
-                <Button className="bg-green-500 hover:bg-green-600 text-white text-sm">
-                  WhatsApp
-                </Button>
+                <a href="https://api.whatsapp.com/send/?phone=554232291353&text&type=phone_number&app_absent=0" className="text-gray-300 hover:text-white transition-colors"> 
+                  <Button className="bg-green-500 hover:bg-green-600 text-white text-sm">
+                    WhatsApp
+                  </Button>
+                </a>
+                
               </div>
             </div>
           </div>
