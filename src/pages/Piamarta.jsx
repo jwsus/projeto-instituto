@@ -89,12 +89,14 @@ export default function Piamarta() {
                 
                 {/* Seção 2: Citações e Legado (Fundo Claro) */}
                 <section className="bg-teal-50 py-20 lg:py-28">       
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 items-center">
-                        <div >
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                        <div className="md:col-start-1">
                             <p className="text-lg text-gray-700" >
                                 Assim, sobre a colina de Santa Júlia, em Brescia, São Piamarta conserta duas pequenas casas que estavam caindo e inicia as atividades do Instituto Artigianelli. As grandes dificuldades econômicas que logo cercaram São Piamarta, levaram o Bispo a pedir que ele desistisse da obra, mas o bom homem com o coração cheio de confiança em Deus e convencido do valor da obra recém-criada, assume pessoalmente toda a responsabilidade do Instituto e com a aprovação do Bispo continua seu trabalho. Deus premiou o Padre que, arriscando uma total falência por amor de seus jovens, nele confiou. O instituto Artigianelli realizou um verdadeiro serviço aos jovens do mundo do trabalho, em Brescia.
                                 Remedello, província de Bréscia, era uma região pouco fértil e despovoada. Assim, em 1895 funda a Colônia Agrícola de Remedello para revitalizar e dignificar a agricultura, ensinando aos jovens agricultores métodos de cultivos científicos e eficazes. Remedello aos poucos vai se transformando, colheitas são dobradas e os terrenos amarelados se tornam verdes e férteis.
                             </p>
+                        </div>
+                        <div className="md:col-start-2">
                             <p className="text-lg text-gray-700">
                                 Em torno do São Piamarta cresceu uma comunidade de pessoas compartilhando dos seus ideais e do seu modo de viver. O Padre, sob o impulso do Espírito Santo, funda uma família religiosa para dar continuidade à sua obra em favor da juventude pobre. No dia 25 de maio de 1902, durante a celebração da Santa Missa, o Bispo de Brescia aprovou verbalmente a “Pia Sociedade da Sagrada Família de Nazaré”, formada por sacerdotes e leigos consagrados. </p>
                             <p className="text-lg text-gray-700">
