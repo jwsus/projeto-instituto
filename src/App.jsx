@@ -18,11 +18,13 @@ import Italia from './pages/Italia'
 import Parceiros from './pages/Parceiros'
 import Congregacao from './pages/Congregacao' 
 import Piamarta from './pages/Piamarta'
+import ScrollToTop from './ScrollToTop'
 import './App.css'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
