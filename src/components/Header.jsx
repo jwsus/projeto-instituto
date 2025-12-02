@@ -23,11 +23,10 @@ const Header = () => {
     { name: 'Nosso Trabalho', href: '/nosso-trabalho', 
       dropdown: [
         { name: 'Hortifruti', href: '/nosso-trabalho/hortifruti'},   
-        { name: 'Quadra/Campo', href: '#' },
+        { name: 'Quadra/Campo', href: '/nosso-trabalho/quadra-campo' },
         { name: 'Convivência', href: '/nosso-trabalho/atividades' },
       ] },
     { name: 'Sedes', href: '/sedes'},
-    { name: 'Fique por Dentro', href: '/fique-por-dentro' },
     { name: 'Seja um Voluntário', href: '/seja-voluntario' },
     {
       name: 'Notícias',

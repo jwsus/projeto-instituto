@@ -181,15 +181,15 @@ export default function BrasilPage() {
                 <div className="bg-green-50 p-8 rounded-2xl border-l-4 border-green-500 relative">
                   <Quote className="absolute top-4 right-4 text-green-200 h-10 w-10" />
                   <p className="text-gray-800 italic text-lg font-medium mb-4 relative z-10">
-                    “Aqui o corpo permaneceu como semente para o futuro desta Igreja local de Ndalatando.”
+                     “Educar para o trabalho é educar para a vida.”  
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center text-xs text-gray-500">
                       <Users size={20} />
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-gray-900">Bispo de Ndalatando</p>
-                      <p className="text-xs text-gray-500">Sobre o Pe. Felice Pistoni</p>
+                     <div>
+                      <p className="text-sm font-bold text-gray-900">São João Piamarta</p>
+                      <p className="text-xs text-gray-500">Fundador da Congregação</p>
                     </div>
                   </div>
                 </div>
