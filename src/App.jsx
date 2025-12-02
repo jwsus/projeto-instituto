@@ -8,6 +8,7 @@ import DoeAgora from './pages/DoeAgora'
 import SejaVoluntario from './pages/SejaVoluntario'
 import Contato from './pages/Contato'
 import Noticias from './pages/Noticias'
+import NoticiaDetalhe from './pages/NoticiaDetalhe'
 import Contraturno from './pages/Contraturno'
 import Hortifruti from './pages/Hortifruti'
 import Sedes from './pages/sedes'
@@ -41,6 +42,7 @@ function App() {
             <Route path="/doe-agora" element={<DoeAgora />} />
             <Route path="/seja-voluntario" element={<SejaVoluntario />} />
             <Route path="/noticias/blog" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Blog</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
+            <Route path="/noticias/:id" element={<NoticiaDetalhe />} />
             <Route path="/noticias" element={<Noticias/>} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/nosso-trabalho/atividades" element={<Contraturno />} />

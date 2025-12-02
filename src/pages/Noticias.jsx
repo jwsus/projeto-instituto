@@ -1,11 +1,15 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Instagram } from "lucide-react"
 
 const Noticias = () => {
+  const navigate = useNavigate()
+  
   const noticias = [
     {
+      id: 0,
       imagens: [
         "img/crianca-scfv.webp",
         "img/crianca2.webp",
@@ -18,6 +22,7 @@ const Noticias = () => {
       link: "https://www.instagram.com/p/DQCxwwkgQXC/",
     },
     {
+      id: 1,
       imagens: [
         "img/leitao.webp",
       ],
@@ -28,6 +33,7 @@ const Noticias = () => {
       link: "https://www.instagram.com/p/DPbgUR9jXJ2/",
     },
     {
+      id: 2,
       imagens: [
         "img/leitao-paraguaia.webp",
         "img/leitao2.webp",
@@ -41,6 +47,7 @@ const Noticias = () => {
       link: "https://www.instagram.com/p/DPewy87EeT2/",
     },
     {
+      id: 3,
       imagens: [
         "img/mulher-empreendedora.jpg",
         "img/mulher-empreendedora2.jpg",
@@ -54,6 +61,12 @@ const Noticias = () => {
     },
   ]
 
+  const handleCardClick = (noticia) => {
+    if (!noticia.link || noticia.link.trim() === "") {
+      navigate(`/noticias/${noticia.id}`)
+    }
+  }
+
   return (
     <div className="max-w-7xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
@@ -63,7 +76,10 @@ const Noticias = () => {
         {noticias.map((noticia, idx) => (
           <Card
             key={idx}
-            className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col"
+            onClick={() => handleCardClick(noticia)}
+            className={`overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col ${
+              (!noticia.link || noticia.link.trim() === "") ? 'cursor-pointer hover:border-teal-500' : ''
+            }`}
           >
             <CarrosselImagens imagens={noticia.imagens || []} />
 
@@ -86,6 +102,7 @@ const Noticias = () => {
                   href={noticia.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                   className="flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium mt-auto"
                 >
                   <Instagram className="w-4 h-4 mr-1" /> Ver no Instagram

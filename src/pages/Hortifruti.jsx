@@ -103,10 +103,15 @@ const Hortifruti = () => {
                 <Clock className="h-6 w-6 text-yellow-300" />
                 <p className="text-xl font-bold text-yellow-300">{content.hero.horario}</p>
             </div>
-            <Button size="lg" className="mt-8 bg-orange-500 hover:bg-orange-600 text-white shadow-xl transition duration-300 hover:scale-[1.05] flex items-center mx-auto">
-                <ShoppingCart className="h-5 w-5 mr-2" />
+            <a
+                href="https://api.whatsapp.com/send/?phone=5542999031932&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 bg-orange-500 hover:bg-orange-600 text-white shadow-xl transition duration-300 hover:scale-[1.05] flex items-center mx-auto text-sm font-medium"
+              >
+                <ShoppingCart className="h-5 w-5" />
                 Encomendar Agora
-            </Button>
+              </a>
           </div>
         </div>
       </section>
@@ -203,10 +208,15 @@ const Hortifruti = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-black mb-3">Não perca a chance de ter produtos frescos na sua mesa!</h3>
           <p className="text-xl mb-6">Faça sua encomenda hoje mesmo.</p>
-          <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-emerald-700 font-bold shadow-xl transition duration-300">
-            <ShoppingCart className="h-6 w-6 mr-2" />
+          <a
+            href="https://api.whatsapp.com/send/?phone=5542999031932&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 bg-yellow-400 hover:bg-yellow-300 text-emerald-700 font-bold shadow-xl transition duration-300 text-sm font-medium"
+          >
+            <ShoppingCart className="h-6 w-6" />
             Encomendar Agora!
-          </Button>
+          </a>
         </div>
       </section>
     </div>

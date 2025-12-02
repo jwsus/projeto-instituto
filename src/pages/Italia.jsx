@@ -50,7 +50,7 @@ const locationsData = [
     city: "Remedello",
     country: "Itália",
     title: "Centro de Formação Profissional – Remedello",
-    image: "https://institutojoaoxxiii.org/wp-content/uploads/…/remedello.jpg", // placeholder
+    image: "img/Remedello.webp", // placeholder
     description: "Centro de formação profissional criado em 1957 para capacitar jovens em diversas artes e ofícios."
   },
   {
@@ -58,7 +58,7 @@ const locationsData = [
     city: "Roma (Cecchina)",
     country: "Itália",
     title: "Paróquia San Girolamo Emiliani – Cecchina",
-    image: "https://institutojoaoxxiii.org/wp-content/uploads/…/cecchina.jpg", // placeholder
+    image: "img/Cecchina.webp", // placeholder
     description: "Paróquia piamartina em Cecchina (periferia de Roma), com forte tradição de oratório e pastoral juvenil."
   },
   {
@@ -66,7 +66,7 @@ const locationsData = [
     city: "Pontinia (Latina)",
     country: "Itália",
     title: "Paróquia Piamarta – Pontinia",
-    image: "https://institutojoaoxxiii.org/wp-content/uploads/…/pontinia.jpg", // placeholder
+    image: "img/Pontinia.webp", // placeholder
     description: "Paróquia fundada em 1946, com compromisso social e educativo piamartino."
   },
   {
@@ -74,7 +74,7 @@ const locationsData = [
     city: "Roseto degli Abruzzi",
     country: "Itália",
     title: "Centro / Paróquia Sagrado Coração – Roseto degli Abruzzi",
-    image: "https://institutojoaoxxiii.org/wp-content/uploads/…/roseto.jpg", // placeholder
+    image: "img/Roseto.webp", // placeholder
     description: "Centro espiritual e paróquia piamartina em Roseto degli Abruzzi (Teramo)."
   }
 ];
