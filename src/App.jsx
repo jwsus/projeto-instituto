@@ -21,6 +21,7 @@ import Piamarta from './pages/Piamarta'
 import ScrollToTop from './ScrollToTop'
 import './App.css'
 import QuadraCampo from './pages/QuadraCampo'
+import EstruturaEquipe from './pages/EstruturaEquipe'
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
             <Route path="/conheca/nossa-historia" element={<NossaHistoria />} />
             <Route path="/conheca/congregacao" element={<Congregacao />} />
             <Route path="/conheca/sao-joao-de-piamarta" element={<Piamarta />} />
-            <Route path="/conheca/estrutura-equipe" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Estrutura e Equipe</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
+            <Route path="/conheca/estrutura-equipe" element={<EstruturaEquipe />} />
             <Route path="/conheca/parceiros"  element={<Parceiros />} />
             <Route path="/nosso-trabalho" element={<div className="py-20 text-center"><h1 className="text-4xl font-bold text-teal-600">Nosso Trabalho</h1><p className="text-gray-600 mt-4">Página em desenvolvimento</p></div>} />
             <Route path="/doe-agora" element={<DoeAgora />} />

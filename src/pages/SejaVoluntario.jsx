@@ -20,6 +20,9 @@ const SejaVoluntario = () => {
     motivacao: ''
   })
 
+  const [sucesso, setSucesso] = useState(false)
+  const [enviando, setEnviando] = useState(false)
+
   const areasAtuacao = [
     {
       icon: <BookOpen className="h-8 w-8 text-blue-500" />,
@@ -55,9 +58,22 @@ const SejaVoluntario = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Formulário enviado:', formData)
-    // Aqui seria implementada a lógica de envio
-    alert('Obrigado pelo seu interesse! Entraremos em contato em breve.')
+    setEnviando(true)
+    setSucesso(false)
+    setTimeout(() => {
+      setFormData({
+        nome: '',
+        email: '',
+        telefone: '',
+        area: '',
+        periodo: '',
+        disponibilidade: [],
+        experiencia: '',
+        motivacao: ''
+      })
+      setEnviando(false)
+      setSucesso(true)
+    }, 1500)
   }
 
   const handleInputChange = (field, value) => {
@@ -294,10 +310,15 @@ const SejaVoluntario = () => {
                 </div>
 
                 <div className="text-center">
-                  <Button type="submit" size="lg" className="bg-teal-500 hover:bg-teal-600 text-white px-12">
-                    Enviar Inscrição
+                  <Button type="submit" size="lg" className="bg-teal-500 hover:bg-teal-600 text-white px-12" disabled={enviando}>
+                    {enviando ? 'Enviando...' : 'Enviar Inscrição'}
                   </Button>
                 </div>
+                {sucesso && (
+                  <div className="text-center mt-6 text-green-600 font-semibold text-lg">
+                    Inscrição enviada com sucesso! Em breve entraremos em contato.
+                  </div>
+                )}
               </form>
             </CardContent>
           </Card>

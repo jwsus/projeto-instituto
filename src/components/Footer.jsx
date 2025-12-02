@@ -1,9 +1,27 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
+  const [nome, setNome] = useState('')
+  const [email, setEmail] = useState('')
+  const [enviando, setEnviando] = useState(false)
+  const [sucesso, setSucesso] = useState(false)
+
+  const handleEnviar = (e) => {
+    e.preventDefault()
+    setEnviando(true)
+    setSucesso(false)
+    setTimeout(() => {
+      setEnviando(false)
+      setSucesso(true)
+      setNome('')
+      setEmail('')
+    }, 1500)
+  }
+
   return (
     <footer className="bg-gray-900 text-white">
       {/* Newsletter Section */}
@@ -13,21 +31,41 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">
               CADASTRE-SE E RECEBA NOSSAS <span className="text-orange-400">NOVIDADES</span>
             </h3>
-            <div className="max-w-md mx-auto flex gap-2">
-              <Input 
-                type="text" 
-                placeholder="Nome" 
+            <form
+              className="max-w-md mx-auto flex gap-2 flex-col sm:flex-row items-center"
+              onSubmit={handleEnviar}
+            >
+              <Input
+                type="text"
+                placeholder="Nome"
                 className="bg-white text-gray-900"
+                value={nome}
+                onChange={e => setNome(e.target.value)}
+                required
+                disabled={enviando}
               />
-              <Input 
-                type="email" 
-                placeholder="E-mail" 
+              <Input
+                type="email"
+                placeholder="E-mail"
                 className="bg-white text-gray-900"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
+                disabled={enviando}
               />
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6">
-                Enviar
+              <Button
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6"
+                type="submit"
+                disabled={enviando}
+              >
+                {enviando ? 'Enviando...' : 'Enviar'}
               </Button>
-            </div>
+            </form>
+            {sucesso && (
+              <div className="mt-4 text-green-200 font-semibold">
+                Cadastro realizado com sucesso!
+              </div>
+            )}
           </div>
         </div>
       </div>
