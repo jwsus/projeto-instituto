@@ -28,14 +28,7 @@ const Header = () => {
       ] },
     { name: 'Sedes', href: '/sedes'},
     { name: 'Seja um Voluntário', href: '/seja-voluntario' },
-    {
-      name: 'Notícias',
-      href: '#',
-      dropdown: [
-        { name: 'Blog', href: '/noticias/blog' },
-        { name: 'Na Mídia', href: '/noticias/na-midia' }
-      ]
-    },
+    { name: 'Notícias',href: '/noticias'},
     { name: 'Contato', href: '/contato' }
   ]
 
